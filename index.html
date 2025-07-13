@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💀 Death Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Landing Page -->
+  <div class="landing" id="landing">
+    <div class="floating-texts" id="floating-container"></div>
+    <div class="big-skull">💀</div>
+    <div class="landing-box">
+  <h1 class="logo-text-only">Death Clock</h1>
+
+  <!-- Name input field -->
+  <div class="input-row" style="margin-top: 20px;">
+    <label for="username"></label>
+    <input type="text" id="username" placeholder="Enter Your Name"/>
+  </div>
+
+  <button class="get-started" onclick="showMain()">Get Started</button>
+</div>
+
+  </div>
+
+  <!-- Main App -->
+  <div class="main" id="main" style="display: none;">
+    <div class="life-progress-box">
+      <h3>☠️ Life Progress</h3>
+      <div class="life-bar-container">
+        <div class="life-bar-fill" id="lifeBarFill"></div>
+      </div>
+      <div class="life-percent" id="lifePercent">--%</div>
+    </div>
+
+    <div class="quote-box">
+      <h3>💡 Time Quotes</h3>
+      <p id="quoteText">“Time waits for none.”</p>
+    </div>
+
+    <div class="clock-wrapper">
+      <div class="clock-container">
+        <canvas id="arcClock" width="500" height="500"></canvas>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h3>🧭 Time Breakdown</h3>
+      <div class="legend-list">
+        <ul>
+          <li><span class="legend-color" style="background-color: #f00;"></span> Seconds</li>
+          <li><span class="legend-color" style="background-color: #ff4444;"></span> Minutes</li>
+          <li><span class="legend-color" style="background-color: #ff7777;"></span> Hours</li>
+          <li><span class="legend-color" style="background-color: #ff9999;"></span> Days</li>
+          <li><span class="legend-color" style="background-color: #ffcccc;"></span> Months</li>
+          <li><span class="legend-color" style="background-color: #fff;"></span> Years</li>
+        </ul>
+      </div>
+
+      <div class="time-left-container">
+        <h4>⏳ Time Left</h4>
+        <div class="time-left-text" id="timeLeftText">
+          <span>-- Years</span><br>
+          <span>-- Months</span><br>
+          <span>-- Days</span><br>
+          <span>--:--:--</span>
+        </div>
+      </div>
+      <!-- Personalized Motivational Message -->
+<div class="personal-message" id="personalMessage">
+  <!-- Message will be inserted by JS -->
+</div>
+
+    </div>
+
+    <div class="input-section">
+      <div class="input-row">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" />
+      </div>
+      <div class="input-row">
+        <label for="expectancy">Life Expectancy (in years)</label>
+        <input type="number" id="expectancy" placeholder="e.g. 80" />
+      </div>
+      <button class="start-clock-btn" onclick="startCountdown()" id="startBtn">Start Clock</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
